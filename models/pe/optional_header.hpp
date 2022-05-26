@@ -85,24 +85,29 @@ namespace binary_parser::models::pe {
         uint32_t number_of_rva_and_sizes;
     };
 
+    struct data_directory {
+        uint32_t virtual_address;
+        uint32_t size;
+    };
+
 #pragma pack(2)
-    struct optional_header_data_directories : public optional_header_windows_specific_base {
-        uint64_t export_table;
-        uint64_t import_table;
-        uint64_t resource_table;
-        uint64_t exception_table;
-        uint64_t certificate_table;
-        uint64_t base_relocation_table;
-        uint64_t debug;
-        uint64_t architecture;
-        uint64_t global_ptr;
-        uint64_t tls_table;
-        uint64_t load_config_table;
-        uint64_t bound_import;
-        uint64_t iat;
-        uint64_t delay_import_descriptor;
-        uint64_t clr_runtime_header;
-        uint64_t reserved_is_zero;
+    struct optional_header_data_directories {
+        data_directory export_table;
+        data_directory import_table;
+        data_directory resource_table;
+        data_directory exception_table;
+        data_directory certificate_table;
+        data_directory base_relocation_table;
+        data_directory debug;
+        data_directory architecture;
+        data_directory global_ptr;
+        data_directory tls_table;
+        data_directory load_config_table;
+        data_directory bound_import;
+        data_directory iat;
+        data_directory delay_import_descriptor;
+        data_directory clr_runtime_header;
+        data_directory reserved_is_zero;
     };
 }
 

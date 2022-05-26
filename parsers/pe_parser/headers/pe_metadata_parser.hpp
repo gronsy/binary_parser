@@ -28,7 +28,7 @@ namespace binary_parser::parsers {
         ~pe_metadata_parser() override = default;
 
         void extract_metadata() override;
-        void extract_optional_header();
+        void extract_optional_headers();
         void extract_section_headers();
 
         template<typename T>
