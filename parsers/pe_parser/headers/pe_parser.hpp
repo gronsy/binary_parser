@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BINARYPARSER_PEPARSER_HPP
+#define BINARYPARSER_PEPARSER_HPP
+
 #include <string>
 
 #include "../../../base_classes/base_parser.hpp"
@@ -6,9 +8,6 @@
 #include "../../../utils/headers/constants.hpp"
 #include "../../../exceptions/headers/invalid_signature_exception.hpp"
 #include "pe_metadata_parser.hpp"
-
-#ifndef BINARYPARSER_PEPARSER_HPP
-#define BINARYPARSER_PEPARSER_HPP
 
 namespace binary_parser::parsers {
     class pe_parser : public base_classes::base_parser {

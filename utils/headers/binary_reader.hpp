@@ -1,11 +1,11 @@
-#pragma once
+#ifndef BINARYPARSER_BINARYREADER_HPP
+#define BINARYPARSER_BINARYREADER_HPP
+
 #include <fstream>
 #include <string>
 
 #include "../../exceptions/headers/invalid_signature_exception.hpp"
 
-#ifndef BINARYPARSER_BINARYREADER_HPP
-#define BINARYPARSER_BINARYREADER_HPP
 namespace binary_parser::utils {
     class binary_reader {
         std::ifstream binary_stream;

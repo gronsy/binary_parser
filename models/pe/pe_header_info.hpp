@@ -1,12 +1,11 @@
-#pragma once
+#ifndef BINARYPARSER_PE_HEADER_INFO_HPP
+#define BINARYPARSER_PE_HEADER_INFO_HPP
+
 #include <vector>
 
 #include "coff_header.hpp"
 #include "optional_header.hpp"
 #include "section_header.hpp"
-
-#ifndef BINARYPARSER_PE_HEADER_INFO_HPP
-#define BINARYPARSER_PE_HEADER_INFO_HPP
 
 namespace binary_parser::models::pe {
     struct pe_header_info {

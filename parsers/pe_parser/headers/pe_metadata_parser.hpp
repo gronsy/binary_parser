@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BINARYPARSER_PE_METADATA_PARSER_HPP
+#define BINARYPARSER_PE_METADATA_PARSER_HPP
+
 #include <map>
 
 #include "../../../base_classes/base_metadata_parser.hpp"
@@ -8,9 +10,6 @@
 #include "../../../utils/headers/constants.hpp"
 #include "../../../exceptions/headers/invalid_signature_exception.hpp"
 #include "header_types.hpp"
-
-#ifndef BINARYPARSER_PE_METADATA_PARSER_HPP
-#define BINARYPARSER_PE_METADATA_PARSER_HPP
 
 namespace binary_parser::parsers {
     class pe_metadata_parser : public base_classes::base_metadata_extractor {

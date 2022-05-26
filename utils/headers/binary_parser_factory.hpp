@@ -1,4 +1,6 @@
-#pragma once
+#ifndef BINARYPARSER_BINARYPARSERFACTORY_HPP
+#define BINARYPARSER_BINARYPARSERFACTORY_HPP
+
 #include <cstdint>
 #include <stdexcept>
 
@@ -6,9 +8,6 @@
 #include "../../interfaces/i_parser.hpp"
 #include "../../parsers/pe_parser/headers/pe_parser.hpp"
 #include "constants.hpp"
-
-#ifndef BINARYPARSER_BINARYPARSERFACTORY_HPP
-#define BINARYPARSER_BINARYPARSERFACTORY_HPP
 
 namespace binary_parser::utils {
     class binary_parser_factory {

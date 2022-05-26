@@ -1,8 +1,8 @@
-#pragma once
-#include <cstdint>
-
 #ifndef BINARYPARSER_IMPORTDIRECTORYTABLE_HPP
 #define BINARYPARSER_IMPORTDIRECTORYTABLE_HPP
+
+#include <cstdint>
+
 
 namespace binary_parser::models::pe {
 #pragma pack(2)

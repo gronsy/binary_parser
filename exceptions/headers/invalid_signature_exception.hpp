@@ -1,10 +1,9 @@
-#pragma once
+#ifndef BINARYPARSER_BAD_MAGIC_EXCEPTION_HPP
+#define BINARYPARSER_BAD_MAGIC_EXCEPTION_HPP
+
 #include <exception>
 #include <cstdint>
 #include <string>
-
-#ifndef BINARYPARSER_BAD_MAGIC_EXCEPTION_HPP
-#define BINARYPARSER_BAD_MAGIC_EXCEPTION_HPP
 
 namespace binary_parser::exceptions {
     class invalid_signature_exception : public std::exception {

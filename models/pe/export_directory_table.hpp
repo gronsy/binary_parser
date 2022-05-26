@@ -1,8 +1,7 @@
-#pragma once
-#include <cstdint>
-
 #ifndef BINARYPARSER_EXPORTDIRECTORYTABLE_HPP
 #define BINARYPARSER_EXPORTDIRECTORYTABLE_HPP
+
+#include <cstdint>
 
 namespace binary_parser::models::pe {
 #pragma pack(2)

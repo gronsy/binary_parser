@@ -1,8 +1,7 @@
-#pragma once
-#include <cstdint>
-
 #ifndef BINARYPARSER_SECTIONTABLE_HPP
 #define BINARYPARSER_SECTIONTABLE_HPP
+
+#include <cstdint>
 
 namespace binary_parser::models {
 #pragma pack(2)

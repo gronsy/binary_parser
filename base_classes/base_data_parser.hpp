@@ -1,9 +1,8 @@
-#pragma once
-#include "../interfaces/i_data_parser.hpp"
-#include "../utils/headers/binary_reader.hpp"
-
 #ifndef BINARYPARSER_BASE_DATA_PARSER_HPP
 #define BINARYPARSER_BASE_DATA_PARSER_HPP
+
+#include "../interfaces/i_data_parser.hpp"
+#include "../utils/headers/binary_reader.hpp"
 
 namespace binary_parser::base_classes {
     class base_data_parser : public interfaces::i_data_parser {

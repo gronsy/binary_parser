@@ -1,9 +1,8 @@
-#pragma once
-#include "../../../base_classes/base_parser.hpp"
-#include "../../../interfaces/i_parser.hpp"
-
 #ifndef BINARYPARSER_ELFPARSER_H
 #define BINARYPARSER_ELFPARSER_H
+
+#include "../../../base_classes/base_parser.hpp"
+#include "../../../interfaces/i_parser.hpp"
 
 namespace binary_parser::parsers{
     class elf_parser : public base_classes::base_parser {

@@ -1,8 +1,7 @@
-#pragma once
-#include <cstdint>
-
 #ifndef BINARYPARSER_CONSTANTS_HPP
 #define BINARYPARSER_CONSTANTS_HPP
+
+#include <cstdint>
 
 namespace binary_parser::utils::constants {
     // PE constants

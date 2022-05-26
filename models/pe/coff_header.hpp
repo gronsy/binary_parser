@@ -1,9 +1,8 @@
-#pragma once
-#include <cstdint>
-#include <string>
-
 #ifndef BINARYPARSER_COFF_HEADER_HPP
 #define BINARYPARSER_COFF_HEADER_HPP
+
+#include <cstdint>
+#include <string>
 
 namespace binary_parser::models::pe {
 #pragma pack(2)

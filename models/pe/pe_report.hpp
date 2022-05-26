@@ -1,11 +1,10 @@
-#pragma once
+#ifndef BINARYPARSER_PE_REPORT_HPP
+#define BINARYPARSER_PE_REPORT_HPP
+
 #include "coff_header.hpp"
 #include "export_directory_table.hpp"
 #include "import_directory_table.hpp"
 #include "optional_header.hpp"
-
-#ifndef BINARYPARSER_PE_REPORT_HPP
-#define BINARYPARSER_PE_REPORT_HPP
 
 namespace binary_parser::models::pe {
     struct pe_report {
