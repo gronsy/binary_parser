@@ -1,3 +1,4 @@
+#pragma once
 #include <cstdint>
 
 #ifndef BINARYPARSER_IMPORTDIRECTORYTABLE_HPP

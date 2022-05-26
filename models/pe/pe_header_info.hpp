@@ -1,8 +1,9 @@
 #pragma once
+#include <vector>
+
 #include "coff_header.hpp"
 #include "optional_header.hpp"
 #include "section_header.hpp"
-#include <vector>
 
 #ifndef BINARYPARSER_PE_HEADER_INFO_HPP
 #define BINARYPARSER_PE_HEADER_INFO_HPP

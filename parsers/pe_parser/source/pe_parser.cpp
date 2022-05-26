@@ -6,6 +6,7 @@ base_classes::base_parser(file_path), metadata_parser(file_path)
 
 void binary_parser::parsers::pe_parser::parse_binary() {
     parse_metadata();
+    parse_data();
 }
 
 void binary_parser::parsers::pe_parser::parse_metadata() {
@@ -14,15 +15,4 @@ void binary_parser::parsers::pe_parser::parse_metadata() {
 
 void binary_parser::parsers::pe_parser::parse_data() {
 
-}
-
-std::string& binary_parser::parsers::pe_parser::extract_msdos_stub() {
-    //Todo: implement extracting msdos stub
-    std::string s;
-    return s;
-}
-
-std::string& binary_parser::parsers::pe_parser::extract_pe_signature() {
-    std::string s;
-    return s;
 }

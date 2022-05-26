@@ -12,8 +12,6 @@ namespace binary_parser::base_classes {
     public:
         base_metadata_extractor(const std::string& file_path) : reader(file_path) {}
         virtual ~base_metadata_extractor() = default;
-
-        virtual void extract_metadata() = 0;
     };
 }
 

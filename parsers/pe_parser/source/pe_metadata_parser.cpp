@@ -4,6 +4,10 @@ binary_parser::parsers::pe_metadata_parser::pe_metadata_parser(const std::string
     map_optional_header_offsets();
 }
 
+const binary_parser::models::pe::pe_header_info &binary_parser::parsers::pe_metadata_parser::get_header_info() const {
+    return header_info;
+}
+
 void binary_parser::parsers::pe_metadata_parser::map_optional_header_offsets() {
     signature_offset = reader.read_data<uint16_t>(utils::constants::pe_signature_offset);
 

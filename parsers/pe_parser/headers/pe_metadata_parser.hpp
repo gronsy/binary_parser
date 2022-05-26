@@ -1,5 +1,6 @@
-#pragma clang diagnostic push
 #pragma once
+#include <map>
+
 #include "../../../base_classes/base_metadata_parser.hpp"
 #include "../../../models/pe/coff_header.hpp"
 #include "../../../models/pe/optional_header.hpp"
@@ -7,7 +8,6 @@
 #include "../../../utils/headers/constants.hpp"
 #include "../../../exceptions/headers/invalid_signature_exception.hpp"
 #include "header_types.hpp"
-#include <map>
 
 #ifndef BINARYPARSER_PE_METADATA_PARSER_HPP
 #define BINARYPARSER_PE_METADATA_PARSER_HPP
@@ -26,6 +26,8 @@ namespace binary_parser::parsers {
     public:
         explicit pe_metadata_parser(const std::string& file_path);
         ~pe_metadata_parser() override = default;
+
+        const models::pe::pe_header_info& get_header_info() const;
 
         void extract_metadata() override;
         void extract_optional_headers();

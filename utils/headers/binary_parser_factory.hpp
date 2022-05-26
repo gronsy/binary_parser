@@ -1,10 +1,11 @@
 #pragma once
+#include <cstdint>
+#include <stdexcept>
+
 #include "binary_reader.hpp"
 #include "../../interfaces/i_parser.hpp"
 #include "../../parsers/pe_parser/headers/pe_parser.hpp"
 #include "constants.hpp"
-#include <cstdint>
-#include <stdexcept>
 
 #ifndef BINARYPARSER_BINARYPARSERFACTORY_HPP
 #define BINARYPARSER_BINARYPARSERFACTORY_HPP

@@ -1,4 +1,5 @@
 #include <string>
+
 #include "utils/headers/binary_parser_factory.hpp"
 
 int main(int argc, char *argv[]) {

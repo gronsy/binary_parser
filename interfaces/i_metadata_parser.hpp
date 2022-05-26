@@ -1,6 +1,3 @@
-#pragma once
-#include "../utils/headers/binary_reader.hpp"
-
 #ifndef BINARYPARSER_IMETADATAREADER_HPP
 #define BINARYPARSER_IMETADATAREADER_HPP
 
