@@ -9,6 +9,7 @@
 #include "../../../models/pe/pe_header_info.hpp"
 #include "../../../utils/headers/constants.hpp"
 #include "../../../exceptions/headers/invalid_signature_exception.hpp"
+#include "../../../exceptions/headers/invalid_reserved_value.hpp"
 #include "header_types.hpp"
 
 namespace binary_parser::parsers {

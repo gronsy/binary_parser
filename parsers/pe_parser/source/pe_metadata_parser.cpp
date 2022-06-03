@@ -71,6 +71,10 @@ void binary_parser::parsers::pe_metadata_parser::extract_optional_headers() {
     header_info.optional_header_standard = extract_standard_fields();
     header_info.optional_header_windows = extract_windows_specific_optional_header();
     header_info.data_directories = reader.read_data<models::pe::optional_header_data_directories>(header_offsets[header_types::data_directories]);
+
+    if(header_info.data_directories.reserved_is_zero.size != 0 || header_info.data_directories.reserved_is_zero.virtual_address != 0) {
+        throw exceptions::invalid_reserved_value{ header_info.data_directories.reserved_is_zero.virtual_address, header_info.data_directories.reserved_is_zero.size };
+    }
 }
 
 void binary_parser::parsers::pe_metadata_parser::extract_section_headers() {
