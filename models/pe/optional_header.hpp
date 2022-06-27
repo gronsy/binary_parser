@@ -5,7 +5,7 @@
 
 namespace binary_parser::models::pe {
 #pragma pack(2)
-    struct optional_header_standard_fields {
+    typedef struct optional_header_standard_fields {
         uint16_t magic;
         uint8_t major_linker_version;
         uint8_t minor_linker_version;
@@ -23,20 +23,20 @@ namespace binary_parser::models::pe {
                 size_of_initialized_data(standard_fields.size_of_initialized_data), size_of_uninitialized_data(standard_fields.size_of_uninitialized_data),
                 address_of_entry_point(standard_fields.address_of_entry_point), base_of_code(base_of_code)
         {}
-    };
+    } standard_fields;
 
 #pragma pack(2)
-    struct optional_header_standard_fields32 : public optional_header_standard_fields {
+    typedef struct optional_header_standard_fields32 : public optional_header_standard_fields {
         uint32_t base_of_data;
 
         optional_header_standard_fields32(const optional_header_standard_fields& optional_header_standard, uint32_t base_of_data) :
                 optional_header_standard_fields(optional_header_standard), base_of_data(base_of_data) {}
-    };
+    } standard_fields32;
 
     struct optional_header_windows_specific_base {};
 
 #pragma pack(2)
-    struct optional_header_windows_specific32 : public optional_header_windows_specific_base {
+    typedef struct optional_header_windows_specific32 : public optional_header_windows_specific_base {
         uint32_t image_base;
         uint32_t section_alignment;
         uint32_t file_alignment;
@@ -58,10 +58,10 @@ namespace binary_parser::models::pe {
         uint32_t size_of_heap_commit;
         uint32_t loader_flags;
         uint32_t number_of_rva_and_sizes;
-    };
+    } windows_specific32;
 
 #pragma pack(2)
-    struct optional_header_windows_specific64 : public optional_header_windows_specific_base {
+    typedef struct optional_header_windows_specific64 : public optional_header_windows_specific_base {
         uint64_t image_base;
         uint32_t section_alignment;
         uint32_t file_alignment;
@@ -83,7 +83,7 @@ namespace binary_parser::models::pe {
         uint64_t size_of_heap_commit;
         uint32_t loader_flags;
         uint32_t number_of_rva_and_sizes;
-    };
+    } windows_specific64;
 
     struct data_directory {
         uint32_t virtual_address;
@@ -91,7 +91,7 @@ namespace binary_parser::models::pe {
     };
 
 #pragma pack(2)
-    struct optional_header_data_directories {
+    typedef struct optional_header_data_directories {
         data_directory export_table;
         data_directory import_table;
         data_directory resource_table;
@@ -108,7 +108,7 @@ namespace binary_parser::models::pe {
         data_directory delay_import_descriptor;
         data_directory clr_runtime_header;
         data_directory reserved_is_zero;
-    };
+    } data_directories;
 }
 
 #endif //BINARYPARSER_OPTIONALHEADER_HPP

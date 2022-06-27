@@ -27,7 +27,7 @@ namespace binary_parser::parsers {
         explicit pe_metadata_parser(const std::string& file_path);
         ~pe_metadata_parser() override = default;
 
-        const models::pe::pe_header_info& get_header_info() const;
+        [[nodiscard]] const models::pe::pe_header_info& get_header_info() const;
 
         void extract_metadata() override;
         void extract_optional_headers();

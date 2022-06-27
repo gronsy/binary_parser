@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-namespace binary_parser::models {
+namespace binary_parser::models::pe {
 #pragma pack(2)
     struct section_header {
         uint64_t name;
