@@ -1,0 +1,8 @@
+//
+// Created by horva on 6/6/2022.
+//
+
+#ifndef BINARYPARSER_PE_DATA_PARSER_HPP
+#define BINARYPARSER_PE_DATA_PARSER_HPP
+
+#endif //BINARYPARSER_PE_DATA_PARSER_HPP
